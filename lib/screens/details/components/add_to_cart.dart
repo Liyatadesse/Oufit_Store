@@ -9,9 +9,7 @@ class AddToCart extends StatelessWidget {
     super.key,
     required this.product,
   });
-
   final Product product;
-
   @override
   Widget build(BuildContext context) {
     return Padding(
