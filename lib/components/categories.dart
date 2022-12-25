@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:online_shop/components/jewellery.dart';
 import 'package:online_shop/constants.dart';
+import 'package:online_shop/screens/home/home_screen.dart';
+import 'dresses.dart';
+import 'foot_wear.dart';
+
+
 class Categories extends StatefulWidget {
   const Categories({super.key});
 
@@ -14,9 +20,9 @@ class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(vertical: kDefaultPaddin),
+      padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin),
       child: SizedBox(
-        height: 25,
+        height: 55,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: categories.length,
@@ -34,20 +40,48 @@ class _CategoriesState extends State<Categories> {
         });
       },
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+        padding: const EdgeInsets.symmetric(horizontal: 13),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              categories[index],
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: selectedIndex == index ? kTextColor : kTextLightColor),
+            TextButton(
+              onPressed: () {
+                Widget myPages(index) {
+                  switch (index) {
+                    case 0:
+                      return const HomeScreen();
+                    case 1:
+                      return const Jewellery();
+                    case 2:
+                      return const FootWear();
+                    case 3:
+                      return const Dresses();
+                    default:
+                    return const Dresses();
+                  }
+                }
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => myPages(index),
+                  ),
+                );
+              },
+              // style: TextButton.styleFrom(
+              //     // fixedSize: Size(5, 5)
+              //     // backgroundColor:
+              //     //  selectedIndex == index ? kTextColor : kTextLightColor
+              //     // backgroundColor: Colors.black,
+              //     //  foregroundColor: Colors.white
+              //     //color: selectedIndex == index ? kTextColor : kTextLightColor
+              //     ),
+              child: Text(categories[index]),
             ),
             Container(
-              margin: EdgeInsets.only(top: kDefaultPaddin / 4),
+              margin: const EdgeInsets.only(left: 8),
               height: 2,
-              width: 30,
+              width: 40,
               color: selectedIndex == index ? Colors.black : Colors.transparent,
             )
           ],

@@ -23,7 +23,7 @@ List<Product> products = [
       description:
           " a product page is simply dummy text of the printing and typesetting industry. lorem as been the industry's standard dummy text exer since .when an unknown printer took a galllery",
       size: 12,
-      color: Color(0xFF3D82AE)),
+      color:const  Color(0xFF3D82AE)),
   Product(
       id: 2,
       image: "assets/images/bag_2.png",
@@ -32,7 +32,7 @@ List<Product> products = [
       description:
           " a product page is simply dummy text of the printing and typesetting industry. lorem as been the industry's standard dummy text exer since .when an unknown printer took a galllery",
       size: 8,
-      color: Color(0xFFD3A984)),
+      color:const  Color(0xFFD3A984)),
   Product(
       id: 3,
       image: "assets/images/bag_3.png",
@@ -41,7 +41,7 @@ List<Product> products = [
       description:
           " a product page is simply dummy text of the printing and typesetting industry. lorem as been the industry's standard dummy text exer since .when an unknown printer took a galllery",
       size: 12,
-      color: Color(0xFF989493)),
+      color:const  Color(0xFF989493)),
   Product(
       id: 4,
       image: "assets/images/bag_4.png",
@@ -50,7 +50,7 @@ List<Product> products = [
       description:
           " a product page is simply dummy text of the printing and typesetting industry. lorem as been the industry's standard dummy text exer since .when an unknown printer took a galllery",
       size: 12,
-      color: Color(0xFFE68398)),
+      color:const  Color(0xFFE68398)),
   Product(
       id: 5,
       image: "assets/images/bag_5.png",
@@ -59,7 +59,7 @@ List<Product> products = [
       description:
           " a product page is simply dummy text of the printing and typesetting industry. lorem as been the industry's standard dummy text exer since .when an unknown printer took a galllery",
       size: 12,
-      color: Color(0xFFFB7883)),
+      color:const  Color(0xFFFB7883)),
   Product(
       id: 6,
       image: "assets/images/bag_6.png",
@@ -68,5 +68,5 @@ List<Product> products = [
       description:
           " a product page is simply dummy text of the printing and typesetting industry. lorem as been the industry's standard dummy text exer since .when an unknown printer took a galllery",
       size: 12,
-      color: Color(0xFFAEAEAE)),
+      color:const  Color(0xFFAEAEAE)),
 ];

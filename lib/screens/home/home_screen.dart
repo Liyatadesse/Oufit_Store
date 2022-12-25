@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:online_shop/components/body.dart';
+
+
 import 'package:online_shop/constants.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,19 +12,20 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
-      body: Body(),
+       appBar: buildAppBar(),
+      body: const  Body(),
     );
   }
 
   AppBar buildAppBar() {
     return AppBar(
+      
       backgroundColor: Colors.white,
       elevation: 0,
-      leading: IconButton(
-        icon: SvgPicture.asset("assets/icons/back.svg"),
-        onPressed: () {},
-      ),
+      // leading: IconButton(
+      //   icon: SvgPicture.asset("assets/icons/back.svg"),
+      //   onPressed: () {},
+      // ),
       actions: [
         IconButton(
           icon: SvgPicture.asset(
@@ -39,7 +41,7 @@ class HomeScreen extends StatelessWidget {
           ),
           onPressed: () {},
         ),
-        SizedBox(
+        const SizedBox(
           width: kDefaultPaddin / 2,
         )
       ],

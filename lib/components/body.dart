@@ -20,13 +20,13 @@ class Body extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineMedium,
           ),
         ),
-        Categories(),
+  const  Categories(),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: GridView.builder(
               itemCount: products.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: kDefaultPaddin,
                   crossAxisSpacing: kDefaultPaddin,

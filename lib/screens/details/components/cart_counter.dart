@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-
 import '../../../constants.dart';
 
 class CartCounter extends StatefulWidget {
@@ -30,6 +28,7 @@ class _CartCounterState extends State<CartCounter> {
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin / 2),
           child: Text(
             numOfItems.toString().padLeft(2, "0"),
+            // ignore: deprecated_member_use
             style: Theme.of(context).textTheme.headline6,
           ),
         ),
@@ -40,7 +39,6 @@ class _CartCounterState extends State<CartCounter> {
                 numOfItems += 1;
               });
             }),
-   
       ],
     );
   }
